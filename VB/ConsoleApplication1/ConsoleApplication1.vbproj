@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -35,10 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Drawing.v24.2, Version=24.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v24.2.Core, Version=24.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v24.2, Version=24.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpo.v24.2, Version=24.2.16.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v26.2, Version=26.2.1.0, Culture=neutral, PublicKeyToken=c38a27d2243c2672, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v26.2.Core, Version=26.2.1.0, Culture=neutral, PublicKeyToken=c38a27d2243c2672, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v26.2, Version=26.2.1.0, Culture=neutral, PublicKeyToken=c38a27d2243c2672, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v26.2, Version=26.2.1.0, Culture=neutral, PublicKeyToken=c38a27d2243c2672, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,4 +65,8 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+
+  <ItemGroup>
+    <Analyzer Include="$(ProgramFiles)\DevExpress 26.2\Components\Offline Packages\devexpress.data\26.2.1\analyzers\dotnet\DevExpress.Generator.dll" Visible="false" Condition="Exists('$(ProgramFiles)\DevExpress 26.2\Components\Offline Packages\devexpress.data\26.2.1\analyzers\dotnet\DevExpress.Generator.dll')" />
+  </ItemGroup>
 </Project>
